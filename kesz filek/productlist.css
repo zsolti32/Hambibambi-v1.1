@@ -1,0 +1,110 @@
+/* Alapstílusok */
+body {
+    background-image: url(../../assets/img/lightbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Fejléc */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Tartalom */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Táblázat */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: #ddd;
+}
+
+/* Gombok */
+button {
+    padding: 10px 15px;
+    background: #c78812;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.back-button {
+    background-color: #c78812;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    background-color: #cf8a09;
+}
+
+
+button:hover {
+    background: #cf8a09;
+}
+
+/* Lábléc */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #bb3906;
+    color: white;
+    margin: 20px auto;
+    display: inline-block;
+    width: auto;
+    border-radius: 8px;
+}
+
+.product img {
+    width: 75px;
+    border-radius: 10px;
+    height: 75px;
+    object-fit: contain;
+    background-color: #eedab5;
+}
