@@ -153,7 +153,7 @@ document.querySelectorAll('.star').forEach(star => {
     if ($result->num_rows > 0) {
         // Táblázat megjelenítése
         echo '<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin-top: 20px;">';
-        echo '<tr><th>Felhasználó neve</th><th>Értékelés</th><th>Leírás</th><th>Dátum</th></tr>';
+        echo '<tr><th>Felhasználó</th><th>Értékelés</th><th>Leírás</th><th>Dátum</th></tr>';
 
         // Eredmények feldolgozása és megjelenítése
         while($row = $result->fetch_assoc()) {
