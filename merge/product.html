@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu" ng-app="HambiBambiApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termékek</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/hambibambi/assets/css/product.css">
+</head>
+<body ng-controller="ProductController">
+    <main>
+        <div class="product-container">
+        <button onclick="toTheTop()" id="top" title="Visszagörgetés">↑</button>
+        <div class="hamburgers">
+            <legend class="legends">Hamburgerek</legend>
+            <div class="container" id="hamburgers">
+                <div class="product" style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 3}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="soups">
+        <legend class="legends">Levesek</legend>
+            <div class="container" id="soups">
+                <div class="product " style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 2}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="salads">
+            <legend class="legends">Saláták</legend>
+            <div class="container" id="salads">
+                <div class="product " style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 1}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pastas">
+            <legend class="legends">Tészták</legend>
+            <div class="container" id="pastas">
+                <div class="product" style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 4}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desserts">
+            <legend class="legends">Sütemények</legend>
+            <div class="container" id="desserts">
+                <div class="product " style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 7}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drinks">
+            <legend class="legends">Üdítők</legend>
+            <div class="container" id="drinks">
+                <div class="product " style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 6}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drinks2">
+            <legend class="legends">Aloholos italok</legend>
+            <div class="container" id="drinks2">
+                <div class="product " style="width: 18rem;" ng-repeat="product in products | filter:{product_category_id: 5}">
+                    <img ng-src="http://localhost/hambibambi/assets/img/{{product.picture}}" alt="{{product.product_name}}">
+                    <div class="card-body product-body">
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="ar">{{ product.price }} Ft</p>
+                        <input type='number' id='quantity' name='quantity' min='1' max="9" value='1'>
+                        <button type='submit' class="kosarhoz" disabled>Kosárba</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script>
+        let app = angular.module('HambiBambiApp', []);
+        app.controller('ProductController', function($scope, $http) {
+            $http.get('http://localhost/hambibambi/application/controller/api.php')
+            .then(function(response) {
+                $scope.products = response.data;
+            })
+            .catch(function(error) {
+                console.error("Hiba történt az API hívás során:", error);
+            });
+        });
+    </script>
+</body>
+</html>
