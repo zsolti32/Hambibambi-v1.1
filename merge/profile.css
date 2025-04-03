@@ -1,0 +1,121 @@
+.profile_container {
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+    color: #333;
+}
+
+.user_details table {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #eedab5;
+    width: 100%;
+    max-width: 800px;
+}
+
+.user_details table .profile_data th {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.user_details table .profile_data td {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.user_details table .profile_buttons td {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.user_details a {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+    min-width: 100px;
+}
+
+.user_details .update {
+    background-color: green;
+}
+
+.user_details .update:hover {
+    background-color: rgb(7, 79, 7);
+}
+
+.user_details .logout {
+    background-color: red;
+}
+
+.user_details .logout:hover {
+    background-color: rgb(165, 12, 12);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    .user_details table {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .user_details table .profile_data th,
+    .user_details table .profile_data td,
+    .user_details table .profile_buttons td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .user_details a {
+        padding: 8px;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 32px;
+        margin-top: 15px;
+    }
+    
+    .profile_container {
+        padding: 10px;
+    }
+    
+    .user_details table {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .user_details table .profile_data th,
+    .user_details table .profile_data td,
+    .user_details table .profile_buttons td {
+        padding: 5px;
+        font-size: 13px;
+    }
+    
+    .user_details a {
+        padding: 6px 8px;
+        min-width: 70px;
+        font-size: 14px;
+    }
+}

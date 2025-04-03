@@ -1,0 +1,214 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, auto);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+/*Header*/
+header {
+    grid-column: 1 / -1;
+}
+
+.containerKep1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.containerKep2 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+.containerKep1 img,
+.containerKep2 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/*Szövegdobozok*/
+.containerSzoveg1, .containerSzoveg2 {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.containerSzoveg1 {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+.containerSzoveg2 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+/*Kiemelt ajánlatok*/
+.kiemelt-ajanlatok {
+    grid-column: 1 / 6;
+    grid-row: 4 / 5;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kiemelt-ajanlatok h2 {
+    text-align: center;
+    color: #ff5722;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.ajanlatok {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.ajanlat {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.ajanlat img {
+    width: 100%;    
+    height: 250px;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: #eedab5;
+}
+
+.ajanlat h3 {
+    color: #ff5722;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*Fő tartalom*/
+
+main {
+    grid-column: 2 / 5;
+    grid-row: 5 / 6;
+}
+
+.bemutatkozas {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bemutatkozas h2 {
+    text-align: center;
+    color: #ff5722;
+}
+
+.bemutatkozoDiv {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f1f0f0e3;
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+}
+
+/*Footer*/
+footer {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+}
+
+/*Reszpinzív stíkus*/
+/*Tablet nézet (max-width: 1024px)*/
+@media screen and (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr; /*Egy oszlopos elrendezés*/
+    }
+
+    header,
+    .containerKep1,
+    .containerKep2,
+    .containerSzoveg1,
+    .containerSzoveg2,
+    .kiemelt-ajanlatok,
+    main,
+    footer {
+        grid-column: 1 / -1; /*Teljes szélesség*/
+    }
+
+    .ajanlatok {
+        grid-template-columns: 1fr; /*Egy oszlopos rács az ajánlatokhoz*/
+    }
+
+    .ajanlat img {
+        height: auto; /*Képek magasságának automatikus igazítása*/
+    }
+
+    .bemutatkozoDiv {
+        padding: 15px;
+        max-width: 100%; /*Teljes szélesség*/
+    }
+
+    .bemutatkozas h2 {
+        font-size: 1.5rem; /*Kisebb betűméret*/
+    }
+
+    .bemutatkozoDiv p {
+        font-size: 1rem; /*Kisebb szövegméret*/
+    }
+}
+
+/*Mobil nézet (max-width: 768px)*/
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /*Egy oszlopos elrendezés*/
+    }
+
+    header,
+    .containerKep1,
+    .containerKep2,
+    .containerSzoveg1,
+    .containerSzoveg2,
+    .kiemelt-ajanlatok,
+    main,
+    footer {
+        grid-column: 1 / -1; /*Teljes szélesség*/
+    }
+
+    .ajanlatok {
+        grid-template-columns: 1fr; /*Egy oszlopos rács az ajánlatokhoz*/
+    }
+
+    .ajanlat img {
+        height: auto; /*Képek magasságának automatikus igazítása*/
+    }
+
+    .bemutatkozoDiv {
+        padding: 15px;
+        max-width: 100%; /*Teljes szélesség*/
+    }
+
+    .bemutatkozas h2 {
+        font-size: 1.2rem; /*Még kisebb betűméret*/
+    }
+
+    .bemutatkozoDiv p {
+        font-size: 0.9rem; /*Még kisebb szövegméret*/
+    }
+}
