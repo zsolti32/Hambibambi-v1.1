@@ -1,0 +1,153 @@
+.container { 
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+.area1 {
+    /*Elérhetőségek kártya*/
+    grid-area: 1 / 2 / 2 / 3;
+    background-color:#f1f0f0e3;
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 10px;
+    }
+  
+.area2 {
+    /*Nyitvatartás kártya*/
+    grid-area: 1 / 3 / 2 / 4;
+    background-color:#f1f0f0e3; 
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+    }
+
+.area3 {
+    /*Közösségi média kártya*/
+    grid-area: 2 / 2 / 3 / 3; 
+    background-color:#f1f0f0e3; 
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.area4{
+    /*Értékelés kártya*/
+    grid-area: 2 / 3 / 3 / 4;
+    background-color:#f1f0f0e3; 
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.area5 {
+    /*Új, egy oszlopos kártya*/
+    grid-area: 3 / 4 / 4 / 2; /* Az új kártya a harmadik sorban, középen lesz */
+    background-color: #f1f0f0e3;
+    border: 1px solid rgb(204, 202, 202);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Címek és bekezdés */
+.elerhetosegh1, .nyitvatartash1, .kozossegimediah1, .kapcsolatfelvetelh1, .ertekelesh1, .felhertekelesh1{
+    font-size: 35px;
+    text-align: center;
+}
+
+/* Formázás az űrlap mezőkhöz */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Gomb stílusok */
+
+.sendMessage{
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+.beviteluzenet{
+    width: 100%;
+
+}
+
+.ertekelesertek{
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .star {
+    color: gray;
+    transition: color 0.3s;
+  }
+  
+  .star:hover, .star:hover ~ .star, .star.selected, .star.selected ~ .star {
+      color: gold;
+  }
